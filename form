@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم جامع و کامل اطلاعات</title>
+    <style>
+        /* --- فونت و استایل‌های عمومی --- */
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        /* --- استایل‌های بخش‌ها --- */
+        .form-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .form-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+            color: #3498db;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+        }
+
+        /* --- استایل‌های فرم --- */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        label .required {
+            color: #e74c3c;
+            margin-right: 4px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        input[type="url"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+            font-family: 'Vazirmatn', sans-serif;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* --- استایل‌های چک‌باکس و رادیو باتن --- */
+        .checkbox-group,
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item,
+        .radio-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-item input[type="checkbox"],
+        .radio-item input[type="radio"] {
+            margin-left: 8px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .checkbox-item label,
+        .radio-item label {
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        /* --- استایل دکمه --- */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 1.1em;
+            font-weight: 500;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button[type="submit"] {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #229954;
+            transform: translateY(-2px);
+        }
+
+        button[type="reset"] {
+            background-color: #95a5a6;
+            color: white;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #7f8c8d;
+        }
+
+        /* --- استایل‌های ریسپانسیو --- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>فرم جامع ثبت اطلاعات</h1>
+        <p style="text-align: center; margin-bottom: 30px; color: #777;">لطفاً تمام اطلاعات زیر را با دقت تکمیل نمایید. فیلدهای دارای ستاره (*) الزامی هستند.</p>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <!-- بخش ۱: اطلاعات شخصی -->
+            <section class="form-section">
+                <h2 class="section-title">۱. اطلاعات شخصی</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">نام <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">نام خانوادگی <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fatherName">نام پدر</label>
+                        <input type="text" id="fatherName" name="fatherName">
+                    </div>
+                    <div class="form-group">
+                        <label for="nationalCode">کد ملی <span class="required">*</span></label>
+                        <input type="text" id="nationalCode" name="nationalCode" maxlength="10" pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthDate">تاریخ تولد <span class="required">*</span></label>
+                        <input type="date" id="birthDate" name="birthDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">جنسیت <span class="required">*</span></label>
+                        <select id="gender" name="gender" required>
+                            <option value="">انتخاب کنید</option>
+                            <option value="male">مرد</option>
+                            <option value="female">زن</option>
+                            <option value="other">سایر</option>
+                        </select>
+                    </div>
+                     <div class="form-group">
+                        <label for="maritalStatus">وضعیت تاهل</label>
+                        <select id="maritalStatus" name="maritalStatus">
+                            <option value="">انتخاب کنید</option>
+                            <option value="single">مجرد</option>
+                            <option value="married">متاهل</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="profilePic">تصویر پروفایل</label>
+                        <input type="file" id="profilePic" name="profilePic" accept="image/png, image/jpeg">
+                    </div>
+                </div>
+            </section>
+
+            <!-- بخش ۲: اطلاعات تماس -->
+            <section class="form-section">
+                <h2 class="section-title">۲. اطلاعات تماس</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="email">ایمیل <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">شماره موبایل <span class="required">*</span></label>
+                        <input type="tel" id="mobile" name="mobile" maxlength="11" pattern="09[0-9]{9}" placeholder="09xxxxxxxxx" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">شماره تلفن ثابت</label>
+                        <input type="tel" id="phone" name="phone" placeholder="021xxxxxxxx">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="address">آدرس کامل <span class="required">*</span></label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="province">استان <span class="required">*</span></label>
+                        <input type="text" id="province" name="province" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">شهر <span class="required">*</span></label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postalCode">کد پستی</label>
+                        <input type="text" id="postalCode" name="postalCode" maxlength="10" pattern="[0-9]{10}">
+                    </div>
+                    <div class="form-group">
+                        <label for="website">وب‌سایت یا وبلاگ</label>
+                        <input type="url" id="website" name="website" placeholder="https://yourwebsite.com">
+                    </div>
+                </div>
+            </section>
+
+            <!-- بخش ۳: اطلاعات تحصیلی -->
+            <section class="form-section">
+                <h2 class="section-title">۳. سوابق تحصیلی</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="lastDegree">آخرین مدرک تحصیلی <span class="required">*</span></label>
+                        <select id="lastDegree" name="lastDegree" required>
+                            <option value="">انتخاب کنید</option>
+                            <option value="diploma">دیپلم</option>
+                            <option value="associate">کاردانی</option>
+                            <option value="bachelor">کارشناسی</option>
+                            <option value="master">کارشناسی ارشد</option>
+                            <option value="phd">دکتری</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fieldOfStudy">رشته تحصیلی <span class="required">*</span></label>
+                        <input type="text" id="fieldOfStudy" name="fieldOfStudy" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="university">نام دانشگاه یا موسسه <span class="required">*</span></label>
+                        <input type="text" id="university" name="university" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="graduationYear">سال فراغت از تحصیل</label>
+                        <input type="number" id="graduationYear" name="graduationYear" min="1350" max="1410">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="certificates">گواهینامه‌ها و دوره‌های آموزشی (با ویرگول جدا کنید)</label>
+                        <textarea id="certificates" name="certificates" placeholder="مثال: IELTS 7.5, PMP, Advanced Python"></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <!-- بخش ۴: اطلاعات شغلی -->
+            <section class="form-section">
+                <h2 class="section-title">۴. اطلاعات شغلی</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="jobTitle">عنوان شغلی فعلی</label>
+                        <input type="text" id="jobTitle" name="jobTitle">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">نام شرکت یا سازمان</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="workExperience">سابقه کار (سال)</label>
+                        <input type="number" id="workExperience" name="workExperience" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="resume">فایل رزومه (PDF)</label>
+                        <input type="file" id="resume" name="resume" accept=".pdf">
+                    </div>
+                </div>
+            </section>
+
+            <!-- بخش ۵: مهارت‌ها و علاقه‌مندی‌ها -->
+            <section class="form-section">
+                <h2 class="section-title">۵. مهارت‌ها و علاقه‌مندی‌ها</h2>
+                <div class="form-group">
+                    <label>مهارت‌های شما را انتخاب کنید:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="skill1" name="skills" value="html">
+                            <label for="skill1">HTML</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="skill2" name="skills" value="css">
+                            <label for="skill2">CSS</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="skill3" name="skills" value="javascript">
+                            <label for="skill3">JavaScript</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="skill4" name="skills" value="python">
+                            <label for="skill4">Python</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="skill5" name="skills" value="management">
+                            <label for="skill5">مدیریت پروژه</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="skill6" name="skills" value="design">
+                            <label for="skill6">طراحی گرافیک</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 20px;">
+                    <label>سطح تسلط به زبان انگلیسی:</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="lang1" name="englishLevel" value="beginner">
+                            <label for="lang1">مبتدی</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="lang2" name="englishLevel" value="intermediate">
+                            <label for="lang2">متوسط</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="lang3" name="englishLevel" value="advanced">
+                            <label for="lang3">پیشرفته</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="lang4" name="englishLevel" value="native">
+                            <label for="lang4">زبان مادری</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- بخش ۶: اطلاعات تکمیلی -->
+            <section class="form-section">
+                <h2 class="section-title">۶. اطلاعات تکمیلی</h2>
+                <div class="form-group full-width">
+                    <label for="about">درباره خودتان بنویسید (خلاصه‌ای از سوابق و اهداف)</label>
+                    <textarea id="about" name="about" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="referral">چگونه با ما آشنا شدید؟</label>
+                    <select id="referral" name="referral">
+                        <option value="">انتخاب کنید</option>
+                        <option value="search">موتور جستجو (گوگل و...)</option>
+                        <option value="social">شبکه‌های اجتماعی</option>
+                        <option value="friend">معرفی دوستان</option>
+                        <option value="advertisement">تبلیغات</option>
+                        <option value="other">سایر</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label for="additionalDocs">ارسال مدارک تکمیلی (در صورت نیاز)</label>
+                    <input type="file" id="additionalDocs" name="additionalDocs" multiple>
+                </div>
+            </section>
+
+            <!-- بخش ۷: تایید نهایی -->
+            <section class="form-section">
+                <h2 class="section-title">۷. تایید نهایی</h2>
+                <div class="form-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms"><span class="required">*</span> من تمام اطلاعات فوق را به دقت مطالعه کرده و صحت آن‌ها را تایید می‌کنم. با قوانین و مقررات موافقم.</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- دکمه‌ها -->
+            <div class="button-group">
+                <button type="submit">ارسال فرم</button>
+                <button type="reset">پاک کردن فرم</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
