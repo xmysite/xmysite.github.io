@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ارزوین | اپلیکیشن ارز وین</title>
+    <meta name="description" content="ارزوین (ArzVin) بهترین اپلیکیشن ایرانی برای رصد نرخ لحظه‌ای ارزهای دیجیتال. تحلیل بازار، نمودارهای پیشرفته، هشدار قیمت و مدیریت پورتفولیو. دانلود رایگان از مایکت.">
+    <meta name="keywords" content="ارزوین, ArzVin, قیمت ارز دیجیتال, نرخ لحظه‌ای ارز, اپلیکیشن ارز وین, تحلیل بازار کریپتو, قیمت بیت کوین, قیمت اتریوم, نمودار ارز دیجیتال, هشدار قیمت ارز, مدیریت پورتفولیو, ارز دیجیتال ایرانی">
+    <meta name="author" content="ارزوین">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arzvin.ir/">
+    <meta property="og:title" content="ارزوین | اپلیکیشن ارز وین">
+    <meta property="og:description" content="ارزوین (ArzVin) بهترین اپلیکیشن ایرانی برای رصد نرخ لحظه‌ای ارزهای دیجیتال. تحلیل بازار، نمودارهای پیشرفته، هشدار قیمت و مدیریت پورتفولیو.">
+    <meta property="og:image" content="https://arzvin.ir/image/icon.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="ارزوین">
+    <meta property="og:locale" content="fa_IR">
+    
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://arzvin.ir/">
+    <meta property="twitter:title" content="ارزوین | اپلیکیشن ارز وین">
+    <meta property="twitter:description" content="ارزوین (ArzVin) بهترین اپلیکیشن ایرانی برای رصد نرخ لحظه‌ای ارزهای دیجیتال. تحلیل بازار، نمودارهای پیشرفته، هشدار قیمت و مدیریت پورتفولیو.">
+    <meta property="twitter:image" content="https://arzvin.ir/image/icon.jpeg">
+    
+    <link rel="canonical" href="https://arzvin.ir/">
+    <link rel="alternate" hreflang="fa" href="https://arzvin.ir/">
+    <link rel="icon" type="image/jpeg" href="https://arzvin.ir/image/icon.jpeg">
+    <link rel="apple-touch-icon" href="https://arzvin.ir/image/icon.jpeg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://myket.ir">
+    
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//myket.ir">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            scroll-behavior: smooth;
+            direction: rtl;
+        }
+        
+        body {
+            font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+            direction: rtl;
+        }
+        
+        section[id] {
+            scroll-margin-top: 80px;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(147, 51, 234, 0.5);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(147, 51, 234, 0.7);
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        .animate-pulse-custom {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #fff, #d1d5db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-purple-pink {
+            background: linear-gradient(to right, #9333ea, #ec4899);
+        }
+        
+        .hover-gradient-purple-pink:hover {
+            background: linear-gradient(to right, #7e22ce, #db2777);
+        }
+        
+        .backdrop-blur-xl {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        
+        .backdrop-blur-sm {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slider-slide {
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+        
+        @media (min-width: 768px) {
+            .slider-slide {
+                min-width: 50%;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .slider-slide {
+                min-width: 33.333%;
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .slider-slide {
+                min-width: 25%;
+            }
+        }
+        
+        .mobile-drawer {
+            position: fixed;
+            inset: 0;
+            z-index: 999999;
+            display: none;
+        }
+        
+        .mobile-drawer.active {
+            display: block;
+        }
+        
+        .mobile-drawer-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 320px;
+            max-width: 85vw;
+            background-color: #000;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-out;
+        }
+        
+        .mobile-drawer.active .mobile-drawer-content {
+            transform: translateX(0);
+        }
+        
+        .image-viewer {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background-color: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(8px);
+            display: none;
+        }
+        
+        .image-viewer.active {
+            display: flex;
+        }
+        
+        .cursor-grab {
+            cursor: grab;
+        }
+        
+        .cursor-grabbing {
+            cursor: grabbing;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen bg-black text-white overflow-x-hidden relative">
+        <div class="fixed inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20 z-0">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+        </div>
+
+        <div class="relative z-10">
+            <header class="relative border-b border-white/10 bg-black/80 backdrop-blur-xl sticky top-0 z-40">
+                <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+                    <div class="flex items-center space-x-4 space-x-reverse">
+                        <div class="relative">
+                            <img src="https://arzvin.ir/image/icon.jpeg" alt="ارزوین لوگو" width="48" height="48" class="rounded-xl shadow-2xl">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur opacity-30"></div>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-bold gradient-text">ارزوین</h1>
+                            <p class="text-sm text-gray-400">اپلیکیشن ارز وین</p>
+                        </div>
+                    </div>
+                    <nav class="hidden md:flex items-center space-x-8 space-x-reverse">
+                        <a href="#features" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105">ویژگی‌ها</a>
+                        <a href="#screenshots" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105">اسکرین‌شات‌ها</a>
+                        <a href="#community" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105">کانال تلگرام</a>
+                        <a href="https://myket.ir/app/ir.arzvin.app" class="gradient-purple-pink hover-gradient-purple-pink border-0 shadow-lg hover:shadow-purple-500/25 transition-all duration-300 px-4 py-2 rounded-lg text-white font-medium inline-flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            دانلود
+                        </a>
+                    </nav>
+                    <button id="mobile-menu-btn" class="md:hidden bg-white/10 hover:bg-white/20 border-0 text-white p-3 rounded-full transition-all duration-300 hover:scale-110">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </header>
+
+            <div id="mobile-drawer" class="mobile-drawer">
+                <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" id="drawer-backdrop"></div>
+                <div class="mobile-drawer-content">
+                    <div class="h-full flex flex-col">
+                        <div class="flex items-center justify-between p-6 border-b border-white/10">
+                            <div class="flex items-center space-x-3 space-x-reverse">
+                                <div class="relative">
+                                    <img src="https://arzvin.ir/image/icon.jpeg" alt="ارزوین لوگو" width="40" height="40" class="rounded-xl">
+                                    <div class="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur opacity-30"></div>
+                                </div>
+                                <div>
+                                    <h2 class="text-xl font-bold text-white">ارزوین</h2>
+                                    <p class="text-sm text-gray-400">اپلیکیشن ارز وین</p>
+                                </div>
+                            </div>
+                            <button id="close-drawer-btn" class="bg-white/10 hover:bg-white/20 border-0 text-white p-2 rounded-full transition-all duration-200 hover:scale-110">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </button>
+                        </div>
+                        <nav class="flex-1 p-6 space-y-2">
+                            <a href="#features" class="drawer-link flex items-center space-x-4 space-x-reverse text-gray-300 hover:text-white transition-all duration-200 py-4 px-4 rounded-2xl hover:bg-white/10 group">
+                                <div class="p-2 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 group-hover:scale-110 transition-transform">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                                </div>
+                                <span class="text-lg font-medium">ویژگی‌ها</span>
+                            </a>
+                            <a href="#screenshots" class="drawer-link flex items-center space-x-4 space-x-reverse text-gray-300 hover:text-white transition-all duration-200 py-4 px-4 rounded-2xl hover:bg-white/10 group">
+                                <div class="p-2 rounded-xl bg-gradient-to-br from-pink-500 to-purple-500 group-hover:scale-110 transition-transform">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                </div>
+                                <span class="text-lg font-medium">اسکرین‌شات‌ها</span>
+                            </a>
+                            <a href="#community" class="drawer-link flex items-center space-x-4 space-x-reverse text-gray-300 hover:text-white transition-all duration-200 py-4 px-4 rounded-2xl hover:bg-white/10 group">
+                                <div class="p-2 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 group-hover:scale-110 transition-transform">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                                </div>
+                                <span class="text-lg font-medium">کانال تلگرام</span>
+                            </a>
+                        </nav>
+                        <div class="p-6 space-y-4 border-t border-white/10">
+                            <a href="https://myket.ir/app/ir.arzvin.app" class="drawer-link w-full gradient-purple-pink hover-gradient-purple-pink border-0 shadow-lg text-white py-4 rounded-2xl font-medium text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                دانلود اپلیکیشن
+                            </a>
+                            <a href="https://arzvin.ir/ads" class="drawer-link w-full border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:text-white py-4 rounded-2xl bg-transparent font-medium text-lg transition-all duration-300 inline-flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
+                                تبلیغات در ارزوین
+                            </a>
+                        </div>
+                        <div class="p-6 border-t border-white/10">
+                            <h3 class="text-white font-semibold mb-4 text-lg">به ما بپیوندید</h3>
+                            <div class="space-y-3">
+                                <a href="https://t.me/arzvinir" class="drawer-link flex items-center space-x-4 space-x-reverse text-gray-300 hover:text-white transition-all duration-200 py-3 px-4 rounded-xl hover:bg-white/10 group">
+                                    <div class="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 group-hover:scale-110 transition-transform">
+                                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium">کانال تلگرام</span>
+                                        <p class="text-xs text-gray-400">آخرین اخبار و تحلیل‌ها</p>
+                                    </div>
+                                </a>
+                                <a href="mailto:arzvinapp@gmail.com" class="drawer-link flex items-center space-x-4 space-x-reverse text-gray-300 hover:text-white transition-all duration-200 py-3 px-4 rounded-xl hover:bg-white/10 group">
+                                    <div class="p-2 rounded-lg bg-gradient-to-br from-green-500 to-green-600 group-hover:scale-110 transition-transform">
+                                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium">تماس با ما</span>
+                                        <p class="text-xs text-gray-400">ارسال ایمیل</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-6 border-t border-white/10 text-center">
+                            <p class="text-gray-400 text-sm">© 1404 ارزوین</p>
+                            <p class="text-gray-500 text-xs mt-1">همه حقوق محفوظ است</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="relative py-32 px-6">
+                <div class="container mx-auto text-center">
+                    <div class="mb-12 relative">
+                        <div class="relative inline-block">
+                            <img src="https://arzvin.ir/image/icon.jpeg" alt="ارزوین لوگو" width="160" height="160" class="mx-auto rounded-3xl shadow-2xl">
+                            <div class="absolute -inset-4 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 rounded-3xl blur-xl opacity-30 animate-pulse-custom"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="inline-flex items-center bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-white mb-6 px-4 py-2 rounded-full">
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                            بهترین اپلیکیشن ارز دیجیتال ایرانی
+                        </div>
+                    </div>
+
+                    <h1 class="text-6xl md:text-8xl font-black mb-8 gradient-text leading-tight">ارزوین</h1>
+                    <p class="text-2xl md:text-3xl text-gray-300 mb-6 font-light">اپلیکیشن حرفه‌ای رصد ارزهای دیجیتال</p>
+                    <p class="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+                        نرخ لحظه‌ای و داده‌های بازار در کف دست شما. با اپلیکیشن ارز وین، همیشه به‌روز باشید و از سیگنال‌های کانال تلگرام ما بهره‌مند شوید.
+                    </p>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 max-w-4xl mx-auto">
+                        <div class="text-center">
+                            <div class="text-4xl md:text-5xl font-bold gradient-text mb-2">1000+</div>
+                            <div class="text-gray-400 text-sm uppercase tracking-wider">ارز دیجیتال</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl md:text-5xl font-bold gradient-text mb-2">24/7</div>
+                            <div class="text-gray-400 text-sm uppercase tracking-wider">آپدیت لحظه‌ای</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl md:text-5xl font-bold gradient-text mb-2">100%</div>
+                            <div class="text-gray-400 text-sm uppercase tracking-wider">رایگان</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl md:text-5xl font-bold gradient-text mb-2">4.8</div>
+                            <div class="text-gray-400 text-sm uppercase tracking-wider">امتیاز کاربران</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+                        <a href="https://myket.ir/app/ir.arzvin.app" class="gradient-purple-pink hover-gradient-purple-pink text-xl px-12 py-4 rounded-2xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 border-0 group inline-flex items-center text-white font-medium">
+                            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            دانلود از مایکت
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </a>
+                        <a href="https://t.me/arzvinir" class="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:text-white text-xl px-12 py-4 rounded-2xl bg-transparent backdrop-blur-sm transition-all duration-300 inline-flex items-center font-medium">
+                            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            کانال تلگرام
+                        </a>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-6 text-lg">
+                        <div class="flex items-center text-white/80">
+                            <svg class="w-5 h-5 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                            رایگان
+                        </div>
+                        <div class="flex items-center text-white/80">
+                            <svg class="w-5 h-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            امن و خصوصی
+                        </div>
+                        <div class="flex items-center text-white/80">
+                            <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            سریع و به‌روز
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="screenshots" class="relative py-32 px-6">
+                <div class="container mx-auto">
+                    <div class="text-center mb-20">
+                        <h2 class="text-5xl md:text-6xl font-bold mb-6 gradient-text">اسکرین‌شات‌های اپلیکیشن</h2>
+                        <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                            رابط کاربری ساده و قدرتمند ارزوین را مشاهده کنید
+                        </p>
+                    </div>
+
+                    <div id="screenshot-slider" class="relative w-full">
+                        <div class="relative overflow-hidden rounded-3xl">
+                            <div id="slider-track" class="flex transition-transform duration-500 ease-in-out">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-center mt-8 space-x-4 space-x-reverse">
+                            <button id="prev-btn" class="bg-white/10 border border-white/20 text-white hover:bg-white/20 hover:border-white/30 rounded-full p-3 backdrop-blur-sm transition-all duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            </button>
+
+                            <div id="slider-dots" class="flex space-x-2 space-x-reverse">
+                            </div>
+
+                            <button id="play-pause-btn" class="bg-white/10 border border-white/20 text-white hover:bg-white/20 hover:border-white/30 rounded-full p-3 backdrop-blur-sm transition-all duration-300">
+                                <svg id="pause-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <svg id="play-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </button>
+
+                            <button id="next-btn" class="bg-white/10 border border-white/20 text-white hover:bg-white/20 hover:border-white/30 rounded-full p-3 backdrop-blur-sm transition-all duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                        </div>
+
+                        <div class="mt-6 w-full bg-white/10 rounded-full h-1 overflow-hidden">
+                            <div id="progress-bar" class="h-full gradient-purple-pink transition-all duration-100 ease-linear" style="width: 25%"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features" class="relative py-32 px-6">
+                <div class="container mx-auto">
+                    <div class="text-center mb-20">
+                        <h2 class="text-5xl md:text-6xl font-bold mb-6 gradient-text">ویژگی‌های برجسته</h2>
+                        <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                            با اپلیکیشن ارز وین، تمام ابزارهای مورد نیاز برای تحلیل و معامله ارزهای دیجیتال را در اختیار داشته باشید
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    </div>
+                </div>
+            </section>
+
+            <section class="relative py-32 px-6">
+                <div class="container mx-auto">
+                    <div class="text-center mb-20">
+                        <h2 class="text-5xl md:text-6xl font-bold mb-6 gradient-text">ارزهای پشتیبانی شده</h2>
+                        <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                            قیمت لحظه‌ای هزاران ارز دیجیتال معتبر جهان
+                        </p>
+                    </div>
+
+                    <div id="languages-container" class="flex flex-wrap justify-center gap-4">
+                    </div>
+                </div>
+            </section>
+
+            <section id="community" class="relative py-32 px-6">
+                <div class="container mx-auto text-center">
+                    <div class="mb-20">
+                        <h2 class="text-5xl md:text-6xl font-bold mb-6 gradient-text">به کانال تلگرام ما بپیوندید</h2>
+                        <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                            با هزاران کاربر دیگر همراه شوید، آخرین اخبار و تحلیل‌های بازار را دریافت کنید
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <div class="group bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl backdrop-blur-sm relative overflow-hidden rounded-lg">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="p-10 relative z-10">
+                                <div class="inline-flex p-6 rounded-3xl bg-gradient-to-br from-blue-500 to-cyan-500 mb-8 shadow-2xl">
+                                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 text-white">کانال تلگرام ارزوین</h3>
+                                <p class="text-gray-400 mb-8 text-lg">
+                                    آخرین اخبار، تحلیل‌های تکنیکال و سیگنال‌های معاملاتی را دریافت کنید
+                                </p>
+                                <a href="https://t.me/arzvinir" class="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-lg px-8 py-3 rounded-xl border-0 shadow-lg hover:shadow-blue-500/25 transition-all duration-300 text-white font-medium">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                                    عضویت در کانال
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="group bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl backdrop-blur-sm relative overflow-hidden rounded-lg">
+                            <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="p-10 relative z-10">
+                                <div class="inline-flex p-6 rounded-3xl bg-gradient-to-br from-green-500 to-emerald-500 mb-8 shadow-2xl">
+                                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-4 text-white">پشتیبانی کاربران</h3>
+                                <p class="text-gray-400 mb-8 text-lg">
+                                    سوالات خود را از طریق ایمیل با ما در میان بگذارید
+                                </p>
+                                <a href="mailto:arzvinapp@gmail.com" class="inline-flex items-center bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-lg px-8 py-3 rounded-xl border-0 shadow-lg hover:shadow-green-500/25 transition-all duration-300 text-white font-medium">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    ارسال ایمیل
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="relative py-32 px-6">
+                <div class="container mx-auto text-center">
+                    <div class="mb-16">
+                        <h2 class="text-5xl md:text-6xl font-bold mb-6 gradient-text">همین امروز ارزوین را دانلود کنید</h2>
+                        <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                            به هزاران کاربر ما بپیوندید و هوشمندانه‌تر در بازار ارزهای دیجیتال سرمایه‌گذاری کنید
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                        <a href="https://myket.ir/app/ir.arzvin.app" class="gradient-purple-pink hover-gradient-purple-pink text-xl px-12 py-4 rounded-2xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 border-0 group inline-flex items-center text-white font-medium">
+                            <svg class="w-6 h-6 mr-3 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            دانلود رایگان از مایکت
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </a>
+                        <a href="https://t.me/arzvinir" class="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:text-white text-xl px-12 py-4 rounded-2xl bg-transparent backdrop-blur-sm transition-all duration-300 inline-flex items-center font-medium">
+                            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            عضویت در کانال تلگرام
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="relative border-t border-white/10 bg-black/80 backdrop-blur-xl py-16 px-6">
+                <div class="container mx-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                        <div class="flex items-center space-x-4 space-x-reverse mb-8 md:mb-0">
+                            <div class="relative">
+                                <img src="https://arzvin.ir/image/icon.jpeg" alt="ارزوین لوگو" width="48" height="48" class="rounded-xl shadow-2xl">
+                                <div class="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur opacity-30"></div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">ارزوین</h3>
+                                <p class="text-gray-400">اپلیکیشن ارز وین</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-8 space-x-reverse">
+                            <a href="https://myket.ir/app/ir.arzvin.app" class="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            </a>
+                            <a href="https://t.me/arzvinir" class="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            </a>
+                            <a href="mailto:arzvinapp@gmail.com" class="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 border-t border-white/10 text-center">
+                        <p class="text-gray-400 text-lg">&copy; 1404 ارزوین. تمامی حقوق محفوظ است.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div id="image-viewer" class="image-viewer">
+        <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-4">
+            <div class="flex items-center justify-between">
+                <div class="text-white">
+                    <h3 id="viewer-title" class="text-lg font-semibold"></h3>
+                    <p id="viewer-counter" class="text-sm text-gray-400"></p>
+                </div>
+                <button id="close-viewer-btn" class="bg-white/10 hover:bg-white/20 border-0 text-white p-2 rounded-full">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="viewer-image-container" class="absolute inset-0 flex items-center justify-center cursor-grab">
+            <img id="viewer-image" src="" alt="" class="max-w-[90vw] max-h-[90vh] object-contain select-none">
+        </div>
+
+        <div id="viewer-nav-left" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 border-0 text-white p-3 rounded-full backdrop-blur-sm hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </div>
+        <div id="viewer-nav-right" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 border-0 text-white p-3 rounded-full backdrop-blur-sm hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/80 to-transparent p-4">
+            <div class="flex items-center justify-center space-x-4 space-x-reverse">
+                <div class="flex items-center space-x-2 space-x-reverse bg-black/50 rounded-full px-4 py-2 backdrop-blur-sm">
+                    <button id="zoom-out-btn" class="bg-transparent hover:bg-white/20 border-0 text-white p-2 rounded-full">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7"></path></svg>
+                    </button>
+                    <span id="zoom-level" class="text-white text-sm min-w-[3rem] text-center">100%</span>
+                    <button id="zoom-in-btn" class="bg-transparent hover:bg-white/20 border-0 text-white p-2 rounded-full">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path></svg>
+                    </button>
+                    <button id="reset-zoom-btn" class="bg-transparent hover:bg-white/20 border-0 text-white p-2 rounded-full">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    </button>
+                </div>
+                <div id="viewer-dots" class="flex space-x-2 space-x-reverse bg-black/50 rounded-full px-4 py-2 backdrop-blur-sm">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const features = [
+            {
+                icon: '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>',
+                title: "ردیابی ارز وین",
+                description: "قیمت ارز دیجیتال ارز وین را با چیدمان‌های شبکه و لیست، قابل سفارشی‌سازی برای نیازهای معاملاتی شما، نظارت کنید.",
+                gradient: "from-blue-500 to-cyan-500"
+            },
+            {
+                icon: '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>',
+                title: "داده‌های تاریخی و نمودارها",
+                description: "دسترسی به داده‌های لحظه‌ای و تاریخی بازار ارز وین از ۲۴ ساعت گذشته تا سال‌ها برای بینش سرمایه‌گذاری.",
+                gradient: "from-yellow-500 to-orange-500"
+            },
+            {
+                icon: '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>',
+                title: "قیمت‌گذاری از چند منبع",
+                description: "منبع‌گیری از چندین صرافی برای دقیق‌ترین نرخ‌های بازار ارز وین و حرکات قیمت.",
+                gradient: "from-green-500 to-emerald-500"
+            },
+            {
+                icon: '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>',
+                title: "هشدار قیمت",
+                description: "با تنظیم هشدار قیمت، هرگز تغییرات مهم بازار را از دست ندهید و در زمان مناسب معامله کنید.",
+                gradient: "from-purple-500 to-pink-500"
+            },
+            {
+                icon: '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>',
+                title: "مدیریت پورتفولیو",
+                description: "دارایی‌های خود را رصد کنید، سود و زیان خود را محاسبه کرده و عملکرد سرمایه‌گذاری خود را تحلیل نمایید.",
+                gradient: "from-indigo-500 to-purple-500"
+            },
+            {
+                icon: '<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>',
+                title: "پوشش اخبار تلگرام",
+                description: "دسترسی سریع به کانال تلگرام ارز وین برای دریافت آخرین اخبار و تحلیل‌های روز بازار کریپتو.",
+                gradient: "from-blue-500 to-blue-600"
+            }
+        ];
+
+        const languages = [
+            { name: "بیت کوین", color: "bg-orange-500" },
+            { name: "اتریوم", color: "bg-blue-500" },
+            { name: "تتر", color: "bg-green-500" },
+            { name: "بایننس کوین", color: "bg-yellow-500" },
+            { name: "کاردانو", color: "bg-blue-600" },
+            { name: "سولانا", color: "bg-purple-500" },
+            { name: "پولکادات", color: "bg-red-500" },
+            { name: "دوج کوین", color: "bg-yellow-600" },
+            { name: "شیبا", color: "bg-orange-600" },
+            { name: "آوانچ", color: "bg-red-600" },
+            { name: "ریپل", color: "bg-gray-600" },
+            { name: "لایت کوین", color: "bg-gray-500" },
+            { name: "چین لینک", color: "bg-blue-700" },
+            { name: "یونی‌سواپ", color: "bg-pink-500" },
+            { name: "آدا", color: "bg-cyan-500" },
+            { name: "ماتیک", color: "bg-purple-600" }
+        ];
+
+        const screenshots = [
+            { src: "https://arzvin.ir/image/p.png", alt: "ارزوین", title: "ارزوین" },
+            { src: "https://arzvin.ir/image/icon.jpeg", alt: "ارزوین", title: "ارزوین" }
+        ];
+
+        function renderFeatures() {
+            const container = document.querySelector('#features .grid');
+            if (!container) return;
+            
+            container.innerHTML = features.map(feature => `
+                <div class="group bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl backdrop-blur-sm relative overflow-hidden rounded-lg">
+                    <div class="absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                    <div class="p-8 relative z-10">
+                        <div class="inline-flex p-4 rounded-2xl bg-gradient-to-br ${feature.gradient} mb-6 shadow-lg">
+                            <div class="text-white">${feature.icon}</div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-white">${feature.title}</h3>
+                        <p class="text-gray-400 leading-relaxed">${feature.description}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderLanguages() {
+            const container = document.getElementById('languages-container');
+            if (!container) return;
+            
+            container.innerHTML = languages.map(lang => `
+                <div class="bg-white/10 border border-white/20 text-white hover:bg-white/20 px-6 py-3 text-base font-medium rounded-xl backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg relative group overflow-hidden">
+                    <div class="absolute inset-0 ${lang.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                    <span class="relative z-10">${lang.name}</span>
+                </div>
+            `).join('');
+        }
+
+        let currentSlide = 0;
+        let isAutoPlaying = true;
+        let sliderInterval = null;
+
+        function renderSlider() {
+            const track = document.getElementById('slider-track');
+            const dots = document.getElementById('slider-dots');
+            if (!track || !dots) return;
+
+            track.innerHTML = screenshots.concat(screenshots).map((screenshot, index) => {
+                const actualIndex = index % screenshots.length;
+                return `
+                    <div class="w-1/4 flex-shrink-0 px-2">
+                        <div class="group bg-white/5 border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 backdrop-blur-sm cursor-pointer rounded-lg" onclick="openImageViewer(${actualIndex})">
+                            <div class="aspect-[9/16] relative overflow-hidden">
+                                <img src="${screenshot.src}" alt="${screenshot.alt}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="absolute bottom-4 left-4 right-4">
+                                        <h3 class="text-white font-semibold text-lg">${screenshot.title}</h3>
+                                        <p class="text-gray-300 text-sm mt-1">برای مشاهده سایز کامل کلیک کنید</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            dots.innerHTML = screenshots.map((_, index) => `
+                <button onclick="goToSlide(${index})" class="w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-purple-500 scale-125' : 'bg-white/30 hover:bg-white/50'}"></button>
+            `).join('');
+
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const track = document.getElementById('slider-track');
+            const progressBar = document.getElementById('progress-bar');
+            if (!track) return;
+
+            track.style.transform = `translateX(${currentSlide * 25}%)`;
+            
+            if (progressBar) {
+                progressBar.style.width = `${((currentSlide + 1) / screenshots.length) * 100}%`;
+            }
+
+            const dots = document.querySelectorAll('#slider-dots button');
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('bg-purple-500', 'scale-125');
+                    dot.classList.remove('bg-white/30');
+                } else {
+                    dot.classList.remove('bg-purple-500', 'scale-125');
+                    dot.classList.add('bg-white/30');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % screenshots.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + screenshots.length) % screenshots.length;
+            updateSlider();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+
+        function toggleAutoPlay() {
+            isAutoPlaying = !isAutoPlaying;
+            const pauseIcon = document.getElementById('pause-icon');
+            const playIcon = document.getElementById('play-icon');
+            
+            if (pauseIcon) pauseIcon.classList.toggle('hidden', !isAutoPlaying);
+            if (playIcon) playIcon.classList.toggle('hidden', isAutoPlaying);
+            
+            if (isAutoPlaying) {
+                startAutoPlay();
+            } else {
+                stopAutoPlay();
+            }
+        }
+
+        function startAutoPlay() {
+            stopAutoPlay();
+            sliderInterval = setInterval(() => {
+                if (!document.getElementById('image-viewer')?.classList.contains('active')) {
+                    nextSlide();
+                }
+            }, 4000);
+        }
+
+        function stopAutoPlay() {
+            if (sliderInterval) {
+                clearInterval(sliderInterval);
+                sliderInterval = null;
+            }
+        }
+
+        let viewerIndex = 0;
+        let zoom = 1;
+        let isDragging = false;
+        let dragStart = { x: 0, y: 0 };
+        let position = { x: 0, y: 0 };
+
+        function openImageViewer(index) {
+            viewerIndex = index;
+            zoom = 1;
+            position = { x: 0, y: 0 };
+            const viewer = document.getElementById('image-viewer');
+            if (!viewer) return;
+            
+            viewer.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            updateViewer();
+        }
+
+        function closeImageViewer() {
+            const viewer = document.getElementById('image-viewer');
+            if (!viewer) return;
+            
+            viewer.classList.remove('active');
+            document.body.style.overflow = 'unset';
+        }
+
+        function updateViewer() {
+            const viewerImage = document.getElementById('viewer-image');
+            const viewerTitle = document.getElementById('viewer-title');
+            const viewerCounter = document.getElementById('viewer-counter');
+            const zoomLevel = document.getElementById('zoom-level');
+            const viewerDots = document.getElementById('viewer-dots');
+            const navLeft = document.getElementById('viewer-nav-left');
+            const navRight = document.getElementById('viewer-nav-right');
+
+            if (!viewerImage || !viewerTitle || !viewerCounter) return;
+
+            const currentImage = screenshots[viewerIndex];
+            viewerImage.src = currentImage.src;
+            viewerImage.alt = currentImage.alt;
+            viewerTitle.textContent = currentImage.title;
+            viewerCounter.textContent = `${viewerIndex + 1} از ${screenshots.length}`;
+            
+            if (zoomLevel) zoomLevel.textContent = `${Math.round(zoom * 100)}%`;
+            
+            viewerImage.style.transform = `scale(${zoom}) translate(${position.x / zoom}px, ${position.y / zoom}px)`;
+
+            if (viewerDots) {
+                viewerDots.innerHTML = screenshots.map((_, index) => `
+                    <button onclick="viewerGoToSlide(${index})" class="w-2 h-2 rounded-full transition-all duration-200 ${index === viewerIndex ? 'bg-purple-500 scale-125' : 'bg-white/50 hover:bg-white/80'}"></button>
+                `).join('');
+            }
+
+            if (navLeft) navLeft.classList.toggle('hidden', screenshots.length <= 1);
+            if (navRight) navRight.classList.toggle('hidden', screenshots.length <= 1);
+        }
+
+        function viewerGoToSlide(index) {
+            viewerIndex = index;
+            zoom = 1;
+            position = { x: 0, y: 0 };
+            updateViewer();
+        }
+
+        function viewerNextSlide() {
+            viewerIndex = (viewerIndex + 1) % screenshots.length;
+            zoom = 1;
+            position = { x: 0, y: 0 };
+            updateViewer();
+        }
+
+        function viewerPrevSlide() {
+            viewerIndex = (viewerIndex - 1 + screenshots.length) % screenshots.length;
+            zoom = 1;
+            position = { x: 0, y: 0 };
+            updateViewer();
+        }
+
+        function zoomIn() {
+            zoom = Math.min(zoom * 1.2, 5);
+            updateViewer();
+        }
+
+        function zoomOut() {
+            zoom = Math.max(zoom / 1.2, 0.5);
+            updateViewer();
+        }
+
+        function resetZoom() {
+            zoom = 1;
+            position = { x: 0, y: 0 };
+            updateViewer();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            renderFeatures();
+            renderLanguages();
+            renderSlider();
+            startAutoPlay();
+
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileDrawer = document.getElementById('mobile-drawer');
+            const drawerBackdrop = document.getElementById('drawer-backdrop');
+            const closeDrawerBtn = document.getElementById('close-drawer-btn');
+
+            if (mobileMenuBtn && mobileDrawer) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileDrawer.classList.add('active');
+                });
+            }
+
+            if (closeDrawerBtn && mobileDrawer) {
+                closeDrawerBtn.addEventListener('click', () => {
+                    mobileDrawer.classList.remove('active');
+                });
+            }
+
+            if (drawerBackdrop && mobileDrawer) {
+                drawerBackdrop.addEventListener('click', () => {
+                    mobileDrawer.classList.remove('active');
+                });
+            }
+
+            document.querySelectorAll('.drawer-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileDrawer.classList.remove('active');
+                });
+            });
+
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const playPauseBtn = document.getElementById('play-pause-btn');
+
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (playPauseBtn) playPauseBtn.addEventListener('click', toggleAutoPlay);
+
+            const closeViewerBtn = document.getElementById('close-viewer-btn');
+            const viewerNavLeft = document.getElementById('viewer-nav-left');
+            const viewerNavRight = document.getElementById('viewer-nav-right');
+            const zoomInBtn = document.getElementById('zoom-in-btn');
+            const zoomOutBtn = document.getElementById('zoom-out-btn');
+            const resetZoomBtn = document.getElementById('reset-zoom-btn');
+            const viewerImageContainer = document.getElementById('viewer-image-container');
+            const viewerImage = document.getElementById('viewer-image');
+
+            if (closeViewerBtn) closeViewerBtn.addEventListener('click', closeImageViewer);
+            if (viewerNavLeft) viewerNavLeft.addEventListener('click', viewerPrevSlide);
+            if (viewerNavRight) viewerNavRight.addEventListener('click', viewerNextSlide);
+            if (zoomInBtn) zoomInBtn.addEventListener('click', zoomIn);
+            if (zoomOutBtn) zoomOutBtn.addEventListener('click', zoomOut);
+            if (resetZoomBtn) resetZoomBtn.addEventListener('click', resetZoom);
+
+            if (viewerImageContainer && viewerImage) {
+                viewerImageContainer.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    dragStart.x = e.clientX - position.x;
+                    dragStart.y = e.clientY - position.y;
+                    viewerImageContainer.classList.add('cursor-grabbing');
+                    viewerImageContainer.classList.remove('cursor-grab');
+                });
+
+                viewerImageContainer.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+                    e.preventDefault();
+                    position.x = e.clientX - dragStart.x;
+                    position.y = e.clientY - dragStart.y;
+                    updateViewer();
+                });
+
+                viewerImageContainer.addEventListener('mouseup', () => {
+                    isDragging = false;
+                    viewerImageContainer.classList.remove('cursor-grabbing');
+                    viewerImageContainer.classList.add('cursor-grab');
+                });
+
+                viewerImageContainer.addEventListener('mouseleave', () => {
+                    isDragging = false;
+                    viewerImageContainer.classList.remove('cursor-grabbing');
+                    viewerImageContainer.classList.add('cursor-grab');
+                });
+
+                viewerImageContainer.addEventListener('wheel', (e) => {
+                    e.preventDefault();
+                    if (e.deltaY < 0) {
+                        zoomIn();
+                    } else {
+                        zoomOut();
+                    }
+                });
+            }
+
+            document.addEventListener('keydown', (e) => {
+                const viewer = document.getElementById('image-viewer');
+                if (viewer && viewer.classList.contains('active')) {
+                    if (e.key === 'Escape') closeImageViewer();
+                    if (e.key === 'ArrowRight') viewerNextSlide();
+                    if (e.key === 'ArrowLeft') viewerPrevSlide();
+                    if (e.key === '+' || e.key === '=') zoomIn();
+                    if (e.key === '-' || e.key === '_') zoomOut();
+                    if (e.key === '0') resetZoom();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
